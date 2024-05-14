@@ -9,8 +9,8 @@ The Stata scripts for this repository can be found in the scripts folder[youngam
 ### Raw-data
 I use data from the CPS via [IPUMS-CPS](https://cps.ipums.org/cps/) and the SCF via the [Federal Reserve](https://www.federalreserve.gov/econres/scfindex.htm). Access to IPUMS-CPS requires creating an account and agreeing to their user agreement. They also place restrictions on publicly disseminating their data; therefore, replication of this analysis requires accessing CPS data either through the [IPUMS API](https://developer.ipums.org/docs/v2/apiprogram/) (the method implemented in my scripts) or directly through the IPUMS-CPS extract system. If the latter method is used, the user can ignore code in section 1A of 01_wrangling.do and edit the script to directly access their own IPUMS-CPS extract.
 
-### Derived-data
+### [Derived-data](https://github.com/jamesohawkins/SCF-Comparison/tree/main/Derived-Data)
 Empty folder where wrangled data is stored.
 
-### Output
+### [Output](https://github.com/jamesohawkins/SCF-Comparison/tree/main/Output)
 Contains all output (visualizations and csv files) from the analysis.
