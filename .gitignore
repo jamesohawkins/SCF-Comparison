@@ -1,5 +1,4 @@
 Raw-Data/CPS*
-Derived-Data/cps_wrangled.dta
-Derived-scf_summaryunified.dta
+Derived-Data/*
 Omitted/*
 Scripts/profile.do
