@@ -1,4 +1,6 @@
-# SCF Comparison
+# SCF Comparison Repository
+![](https://github.com/jamesohawkins/SCF-Comparison/blob/main/Output/own_surveyXage.png)
+
 This repository contains all necessary raw data and Stata scripts for replicating the results from the analysis of the Current Population Survey (CPS) and the Survey of Consumer Finances (SCF) contained in the accompanying brief[youngamericans.berkeley.edu/scf-comparison]. This repository also includes all output and accompanying estimates.
 
 ## Repository Structure
