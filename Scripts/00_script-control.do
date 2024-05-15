@@ -1,7 +1,7 @@
 ////////////////////////////////////////////////////////////////////////////////
 // Do File: 00_script-control.do
 // Primary Author: James Hawkins, Berkeley Institute for Young Americans
-// Date: 5/10/24
+// Date: 5/15/24
 // Stata Version: 17
 // Description: From this script, you can reproduce all of the output for the 
 // accompanying brief "Are Wealth Data Representative of Young Adults?" 
@@ -16,10 +16,16 @@ timer on 1
 /// ============================================================================
 **# 1. Miscellaneous Set Up
 /// ============================================================================
-/*  In this section, I define the local directory of the repository, set up the 
-    python environment for use with IPUMS API, and provide code to set a user's 
-    IPUMS API key (in my own analysis, I use a profile.do script to establish 
-	the IPUMS API key each time Stata starts). */
+/*  In this section, I define the random number seeds, the local directory of 
+    the repository, set up the python environment for use with IPUMS API, and 
+	provide code to set a user's IPUMS API key (in my own analysis, I use a 
+	profile.do script to establish the IPUMS API key each time Stata starts). */
+	
+// Random number seeds
+// -----------------------------------------------------------------------------
+set seed 43716732
+set sortseed 20231964
+
 
 // Set directory for repository
 // -----------------------------------------------------------------------------
