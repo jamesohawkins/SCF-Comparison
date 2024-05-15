@@ -1,7 +1,7 @@
 ////////////////////////////////////////////////////////////////////////////////
 // Do File: 02_analysis.do.do
 // Primary Author: James Hawkins, Berkeley Institute for Young Americans
-// Date: 5/10/24
+// Date: 5/15/24
 // Stata Version: 17
 // Description: In this script, I implement analysis comparing homeownership in
 // the CPS and SCF, as well as analysis of housing wealth in the SCF, and 
@@ -115,7 +115,7 @@ yscale(lstyle(none)) ///
 ylabel(0 "0%" .1 "10%" .2 "20%" .3 "30%" .4 "40%" .5 "50%" .6 "60%" .7 "70%" .8 "80%", angle(0) gmax gmin glpattern(solid) glcolor(gs9%15) glwidth(vthin) labcolor("59 126 161") labsize(2.5) tlength(0) tlcolor(gs9%15)) ///
 legend(order(1 "CPS: Household" 2 "SCF: Household" 3 "CPS: Person") rows(1) pos(12) bmargin(zero)) ///
 by(, legend(order(1 "CPS (Household)" 2 "CPS (Person)" 3 "SCF") pos(12) bmargin(zero))) ///
-by(, note("Source: {fontface Lato:Author's analysis of the Current Population Survey via IPUMS-CPS and the Survey of Consumer Finances.} Sample: {fontface Lato:U.S. adult household residents (person measure) or householders (household measure).}" `notes', margin(l+1.5) color(gs7) span size(1.75) position(7))) ///
+by(, note("Source: {fontface Lato:Author's analysis of the Current Population Survey via IPUMS-CPS and the Survey of Consumer Finances.} Sample: {fontface Lato:U.S. adult household residents (person measure) or householders (household}" "{fontface Lato:measure).}" `notes', margin(l+1.5) color(gs7) span size(1.75) position(7))) ///
 by(, caption("@jamesohawkins {fontface Lato:with} youngamericans.berkeley.edu", margin(l+1.5 t-1) color(gs7%50) span size(1.75) position(7))) ///
 by(, graphregion(margin(0 0 0 0) fcolor(white) lcolor(white) lwidth(medium) ifcolor(white) ilcolor(white) ilwidth(medium))) ///
 by(, plotregion(margin(0 0 0 0) fcolor(white) lcolor(white) lwidth(medium) ifcolor(white) ilcolor(white) ilwidth(medium))) ///
@@ -151,7 +151,7 @@ yscale(lstyle(none)) ///
 ylabel(.75 "0.75" .8 "0.80" .85 "0.85" .9 "0.90" .95 "0.95" 1 "1.0", angle(0) gmax gmin glpattern(solid) glcolor(gs9%15) glwidth(vthin) labcolor("59 126 161") labsize(2.5) tlength(0) tlcolor(gs9%15)) ///
 legend(order(1 "Ratio of SCF Household to CPS Household Measure" 2 "Ratio of CPS Person to CPS Household Measure") rows(1) pos(12) bmargin(zero)) ///
 by(, legend(order(1 "CPS (Household)" 2 "CPS (Person)" 3 "SCF") pos(12) bmargin(zero))) ///
-by(, note("Source: {fontface Lato:Author's analysis of the Current Population Survey via IPUMS-CPS and the Survey of Consumer Finances.} Sample: {fontface Lato:U.S. household residents (person measure) or householders (household measure) ages 25+.}" `notes', margin(l+1.5) color(gs7) span size(1.75) position(7))) ///
+by(, note("Source: {fontface Lato:Author's analysis of the Current Population Survey via IPUMS-CPS and the Survey of Consumer Finances.} Sample: {fontface Lato:U.S. household residents (person measure) or}" "{fontface Lato:householders (household measure) ages 25+.}" `notes', margin(l+1.5) color(gs7) span size(1.75) position(7))) ///
 by(, caption("@jamesohawkins {fontface Lato:with} youngamericans.berkeley.edu", margin(l+1.5 t-1) color(gs7%50) span size(1.75) position(7))) ///
 by(, graphregion(margin(0 0 0 0) fcolor(white) lcolor(white) lwidth(medium) ifcolor(white) ilcolor(white) ilwidth(medium))) ///
 by(, plotregion(margin(0 0 0 0) fcolor(white) lcolor(white) lwidth(medium) ifcolor(white) ilcolor(white) ilwidth(medium))) ///
@@ -188,7 +188,7 @@ yscale(lstyle(none)) ///
 ylabel(.3 "0.3" .4 "0.4" .5 "0.5" .6 "0.6" .7 "0.7" .8 "0.8" .9 "0.9" 1 "1.0" 1.1 "1.1", angle(0) gmax gmin glpattern(solid) glcolor(gs9%15) glwidth(vthin) labcolor("59 126 161") labsize(2.5) tlength(0) tlcolor(gs9%15)) ///
 legend(order(3 "1. Ratio with Preferred CPS Measure" 2 "2. Ratio with CPS Partners/Roommates" 1 "3. Ratio with CPS Spouses") rows(1) pos(12) bmargin(zero)) ///
 by(, legend(order(3 "1. Ratio with Preferred CPS Measure" 2 "2. Ratio with CPS Partners/Roommates" 1 "3. Ratio with CPS Spouses") pos(12) bmargin(zero))) ///
-by(, note("Source: {fontface Lato:Author's analysis of the Current Population Survey via IPUMS-CPS and the Survey of Consumer Finances.} Sample: {fontface Lato:U.S. adult household residents (person measure) or householders (household measure).}" `notes', margin(l+1.5) color(gs7) span size(1.75) position(7))) ///
+by(, note("Source: {fontface Lato:Author's analysis of the Current Population Survey via IPUMS-CPS and the Survey of Consumer Finances.} Sample: {fontface Lato:U.S. adult household residents (person measure) or}" "{fontface Lato:householders (household measure).}" `notes', margin(l+1.5) color(gs7) span size(1.75) position(7))) ///
 by(, caption("@jamesohawkins {fontface Lato:with} youngamericans.berkeley.edu", margin(l+1.5 t-1) color(gs7%50) span size(1.75) position(7))) ///
 by(, graphregion(margin(0 0 0 0) fcolor(white) lcolor(white) lwidth(medium) ifcolor(white) ilcolor(white) ilwidth(medium))) ///
 by(, plotregion(margin(0 0 0 0) fcolor(white) lcolor(white) lwidth(medium) ifcolor(white) ilcolor(white) ilwidth(medium))) ///
