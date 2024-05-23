@@ -1,7 +1,7 @@
 ////////////////////////////////////////////////////////////////////////////////
 // Do File: 02_analysis.do.do
 // Primary Author: James Hawkins, Berkeley Institute for Young Americans
-// Date: 5/15/24
+// Date: 5/23/24
 // Stata Version: 17
 // Description: In this script, I implement analysis comparing homeownership in
 // the CPS and SCF, as well as analysis of housing wealth in the SCF, and 
@@ -121,7 +121,7 @@ by(, graphregion(margin(0 0 0 0) fcolor(white) lcolor(white) lwidth(medium) ifco
 by(, plotregion(margin(0 0 0 0) fcolor(white) lcolor(white) lwidth(medium) ifcolor(white) ilcolor(white) ilwidth(medium))) ///
 by(, graphregion(margin(r+1)))
 cd "$directory\output"
-graph export own_surveyXage.png, replace
+graph export own_surveyXage.png, replace height(5000)
 
 // Visualization: Ratio of CPS person measure to SCF household measure (ages 25+)
 // -----------------------------------------------------------------------------
@@ -157,7 +157,7 @@ by(, graphregion(margin(0 0 0 0) fcolor(white) lcolor(white) lwidth(medium) ifco
 by(, plotregion(margin(0 0 0 0) fcolor(white) lcolor(white) lwidth(medium) ifcolor(white) ilcolor(white) ilwidth(medium))) ///
 by(, graphregion(margin(r+1)))
 cd "$directory\output"
-graph export ownratio_age6-10.png, replace
+graph export ownratio_age6-10.png, replace height(5000)
 
 // Visualization: Ratio of CPS person measure to SCF household measure (ages 18+ and alternative specifications)
 // -----------------------------------------------------------------------------
@@ -194,7 +194,7 @@ by(, graphregion(margin(0 0 0 0) fcolor(white) lcolor(white) lwidth(medium) ifco
 by(, plotregion(margin(0 0 0 0) fcolor(white) lcolor(white) lwidth(medium) ifcolor(white) ilcolor(white) ilwidth(medium))) ///
 by(, graphregion(margin(r+1)))
 cd "$directory\output"
-graph export ownratio_age5-10.png, replace
+graph export ownratio_age5-10.png, replace height(5000)
 
 
 /// ============================================================================
@@ -249,7 +249,7 @@ by(, graphregion(margin(0 0 0 0) fcolor(white) lcolor(white) lwidth(medium) ifco
 by(, plotregion(margin(0 0 0 0) fcolor(white) lcolor(white) lwidth(medium) ifcolor(white) ilcolor(white) ilwidth(medium))) ///
 by(, graphregion(margin(r+1)))
 cd "$directory\output"
-graph export headship_measureXage.png, replace
+graph export headship_measureXage.png, replace height(5000)
 
 
 /// ============================================================================
@@ -300,13 +300,13 @@ yscale(lstyle(none)) ///
 ylabel(0 "0%" .1 "10%" .2 "20%" .3 "30%" .4 "40%" .5 "50%", angle(0) gmax gmin glpattern(solid) glcolor(gs9%15) glwidth(vthin) labcolor("59 126 161") labsize(2.5) tlength(0) tlcolor(gs9%15)) ///
 legend(order(3 "Preferred CPS measure" 2 "CPS Measure with partners/roommates" 1 "CPS measure with spouses only") rows(1) pos(12) bmargin(zero)) ///
 by(, legend(order(3 "Ratio with Preferred CPS Measure" 2 "Ratio with CPS Partners/Roommates" 1 "Ratio with CPS Spouses") pos(12) bmargin(zero))) ///
-by(, note("Source: {fontface Lato:Author's analysis of the Survey of Consumer Finances.} Sample: {fontface Lato:U.S. adult householders.}" `notes', margin(l+1.5) color(gs7) span size(1.75) position(7))) ///
+by(, note("Source: {fontface Lato:Author's analysis of the Survey of Consumer Finances.} Sample: {fontface Lato:U.S. adult householders (wealth of primary family).}" `notes', margin(l+1.5) color(gs7) span size(1.75) position(7))) ///
 by(, caption("@jamesohawkins {fontface Lato:with} youngamericans.berkeley.edu", margin(l+1.5 t-1) color(gs7%50) span size(1.75) position(7))) ///
 by(, graphregion(margin(0 0 0 0) fcolor(white) lcolor(white) lwidth(medium) ifcolor(white) ilcolor(white) ilwidth(medium))) ///
 by(, plotregion(margin(0 0 0 0) fcolor(white) lcolor(white) lwidth(medium) ifcolor(white) ilcolor(white) ilwidth(medium))) ///
 by(, graphregion(margin(r+0)))
 cd "$directory\output"
-graph export housingwealthshare.png, replace
+graph export housingwealthshare.png, replace height(5000)
 
 
 /// ============================================================================
@@ -409,7 +409,7 @@ graphregion(margin(0 0 0 0) fcolor(white) lcolor(white) lwidth(medium) ifcolor(w
 plotregion(margin(l+1 r+1 0 0) fcolor(white) lcolor(white) lwidth(medium) ifcolor(white) ilcolor(white) ilwidth(medium)) ///
 graphregion(margin(r+3))
 cd "$directory\output"
-graph export ownratio_primeagepop.png, replace
+graph export ownratio_primeagepop.png, replace height(5000)
 
 
 /// ============================================================================
@@ -508,7 +508,7 @@ graphregion(margin(0 0 0 0) fcolor(white) lcolor(white) lwidth(medium) ifcolor(w
 plotregion(margin(l+1 r+1 0 0) fcolor(white) lcolor(white) lwidth(medium) ifcolor(white) ilcolor(white) ilwidth(medium)) ///
 graphregion(margin(r+3))
 cd "$directory\output"
-graph export ownratio_alladults.png, replace
+graph export ownratio_alladults.png, replace height(5000)
 
 
 /// ============================================================================
@@ -611,4 +611,4 @@ by(, graphregion(margin(0 0 0 0) fcolor(white) lcolor(white) lwidth(medium) ifco
 by(, plotregion(margin(0 0 0 0) fcolor(white) lcolor(white) lwidth(medium) ifcolor(white) ilcolor(white) ilwidth(medium))) ///
 by(, graphregion(margin(r+1)))
 cd "$directory\output"
-graph export ownratio_altage.png, replace
+graph export ownratio_altage.png, replace height(5000)
