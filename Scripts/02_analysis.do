@@ -1,7 +1,7 @@
 ////////////////////////////////////////////////////////////////////////////////
 // Do File: 02_analysis.do.do
 // Primary Author: James Hawkins, Berkeley Institute for Young Americans
-// Date: 5/23/24
+// Date: 5/28/24
 // Stata Version: 17
 // Description: In this script, I implement analysis comparing homeownership in
 // the CPS and SCF, as well as analysis of housing wealth in the SCF, and 
@@ -107,8 +107,8 @@ twoway (connected ownhh_cps ownhh_scf ownp1_cps year, mcolor("253 181 21" "0 176
 by(agegroup, rows(1) imargin(vsmall)) ///
 by(, title("Comparing survey measures of homeownership", color("0 50 98") size(large) pos(11) justification(left))) ///
 by(, subtitle("Homeownership rate (household or person measure), by age group", color("59 126 161") size(small) pos(11) justification(left))) ///
-subtitle(,  color(white) size(vsmall) lcolor("59 126 161") fcolor("59 126 161")) ///
-xtitle("", size(small) color(gs6) bmargin(zero)) xscale(lstyle(none)) ///
+subtitle(, color(white) size(vsmall) lcolor("59 126 161") fcolor("59 126 161")) ///
+xtitle("Year", margin(t-2 b-1) size(small) color(gs6) bmargin(zero)) xscale(lstyle(none)) ///
 xlabel(1989 "1989" 1992 "1992" 1995 "1995" 1998 "1998" 2001 "2001" 2004 "2004" 2007 "2007" 2010 "2010" 2013 "2013" 2016 "2016" 2019 "2019" 2022 "2022", angle(45) labsize(tiny) glcolor(gs9%0) labcolor(gs6) tlength(1.25) tlcolor(gs6%30)) ///
 ytitle("") ///
 yscale(lstyle(none)) ///
@@ -142,9 +142,9 @@ if agegroup >= 6 ///
 by(agegroup, rows(1) imargin(vsmall)) ///
 by(, title("Comparing survey measures of homeownership", color("0 50 98") size(large) pos(11) justification(left) lwidth(thin))) ///
 by(, subtitle("Ratio of CPS person measure to SCF household measure of homeownership rates, by age group", color("59 126 161") size(small) pos(11) justification(left))) ///
-subtitle(,  color(white) size(vsmall) lcolor("59 126 161") fcolor("59 126 161")) ///
+subtitle(, color(white) size(vsmall) lcolor("59 126 161") fcolor("59 126 161")) ///
 yline(1, lpattern(solid) lcolor("221 213 199")) ///
-xtitle("", size(small) color(gs6) bmargin(zero)) xscale(lstyle(none)) ///
+xtitle("Year", margin(t-2 b-1) size(small) color(gs6) bmargin(zero)) xscale(lstyle(none)) ///
 xlabel(1989 "1989" 1992 "1992" 1995 "1995" 1998 "1998" 2001 "2001" 2004 "2004" 2007 "2007" 2010 "2010" 2013 "2013" 2016 "2016" 2019 "2019" 2022 "2022", angle(45) labsize(tiny) glcolor(gs9%0) labcolor(gs6) tlength(1.25) tlcolor(gs6%30)) ///
 ytitle("") ///
 yscale(lstyle(none)) ///
@@ -179,9 +179,9 @@ twoway (connected ratio3 year, mcolor("238 31 96") msize(small) msymbol(triangle
 by(agegroup, rows(1) imargin(vsmall)) ///
 by(, title("Comparing survey measures of homeownership", color("0 50 98") size(large) pos(11) justification(left) lwidth(thin))) ///
 by(, subtitle("Ratio of CPS person measures to SCF household measure of homeownership rates, by age group", color("59 126 161") size(small) pos(11) justification(left))) ///
-subtitle(,  color(white) size(vsmall) lcolor("59 126 161") fcolor("59 126 161")) ///
+subtitle(, color(white) size(vsmall) lcolor("59 126 161") fcolor("59 126 161")) ///
 yline(1, lpattern(solid) lcolor("221 213 199")) ///
-xtitle("", size(small) color(gs6) bmargin(zero)) xscale(lstyle(none)) ///
+xtitle("Year", margin(t-2 b-1) size(small) color(gs6) bmargin(zero)) xscale(lstyle(none)) ///
 xlabel(1989 "1989" 1992 "1992" 1995 "1995" 1998 "1998" 2001 "2001" 2004 "2004" 2007 "2007" 2010 "2010" 2013 "2013" 2016 "2016" 2019 "2019" 2022 "2022", angle(45) labsize(tiny) glcolor(gs9%0) labcolor(gs6) tlength(1.25) tlcolor(gs6%30)) ///
 ytitle("") ///
 yscale(lstyle(none)) ///
@@ -235,8 +235,8 @@ twoway (connected headship3 year, mcolor("238 31 96") msize(small) msymbol(trian
 by(agegroup, rows(1) imargin(vsmall)) ///
 by(, title("Comparing alternative measures of headship rates", color("0 50 98") size(large) pos(11) justification(left))) ///
 by(, subtitle("Headship rate, by age group", color("59 126 161") size(small) pos(11) justification(left))) ///
-subtitle(,  color(white) size(vsmall) lcolor("59 126 161") fcolor("59 126 161")) ///
-xtitle("", size(small) color(gs6) bmargin(zero)) xscale(lstyle(none)) ///
+subtitle(, color(white) size(vsmall) lcolor("59 126 161") fcolor("59 126 161")) ///
+xtitle("Year", margin(t-2 b-1) size(small) color(gs6) bmargin(zero)) xscale(lstyle(none)) ///
 xlabel(1989 "1989" 1992 "1992" 1995 "1995" 1998 "1998" 2001 "2001" 2004 "2004" 2007 "2007" 2010 "2010" 2013 "2013" 2016 "2016" 2019 "2019" 2022 "2022", angle(45) labsize(tiny) glcolor(gs9%0) labcolor(gs6) tlength(1.25) tlcolor(gs6%30)) ///
 ytitle("") ///
 yscale(lstyle(none)) ///
@@ -292,8 +292,8 @@ twoway (bar houseshare year, barwidth(1.7) fcolor("0 50 98") lwidth(none)) ///
 by(agegroup, rows(1) imargin(vsmall)) ///
 by(, title("What share of net worth is made up by housing wealth?", color("0 50 98") size(large) pos(11) justification(left))) ///
 by(, subtitle("Total net value of primary residence (net of debt secured by primary residence) as a share of total net worth, by age group", color("59 126 161") size(small) pos(11) justification(left))) ///
-subtitle(,  color(white) size(vsmall) lcolor("59 126 161") fcolor("59 126 161")) ///
-xtitle("", size(small) color(gs6) bmargin(zero)) xscale(lstyle(none)) ///
+subtitle(, color(white) size(vsmall) lcolor("59 126 161") fcolor("59 126 161")) ///
+xtitle("Year", margin(t-2 b-1) size(small) color(gs6) bmargin(zero)) xscale(lstyle(none)) ///
 xlabel(1989 "1989" 1992 "1992" 1995 "1995" 1998 "1998" 2001 "2001" 2004 "2004" 2007 "2007" 2010 "2010" 2013 "2013" 2016 "2016" 2019 "2019" 2022 "2022", angle(45) labsize(tiny) glcolor(gs9%0) labcolor(gs6) tlength(1.25) tlcolor(gs6%30)) ///
 ytitle("") ///
 yscale(lstyle(none)) ///
@@ -397,7 +397,7 @@ twoway (bar ratio1 year, barwidth(1.5) mcolor("59 126 161") msize(vsmall) msymbo
 , ///
 title("Comparing survey measures of homeownership (prime-age pop.)", color("0 50 98") size(large) pos(11) justification(left) lwidth(thin)) ///
 subtitle("Ratio of CPS person measures to SCF household measure of homeownership rates (among 25-54-year-olds)", color("59 126 161") size(small) pos(11) justification(left)) ///
-xtitle("", size(small) color(gs6) bmargin(zero)) xscale(lstyle(none)) ///
+xtitle("Year", margin(b-1) size(small) color(gs6) bmargin(zero)) xscale(lstyle(none)) ///
 xlabel(1989 "1989" 1992 "1992" 1995 "1995" 1998 "1998" 2001 "2001" 2004 "2004" 2007 "2007" 2010 "2010" 2013 "2013" 2016 "2016" 2019 "2019" 2022 "2022", angle(0) labsize(vsmall) glcolor(gs9%0) labcolor(gs6) tlength(0) tlcolor(gs6%30)) ///
 ytitle("") ///
 yscale(lstyle(none) range(.85 .95)) ///
@@ -496,7 +496,7 @@ twoway (bar ratio1 year, barwidth(1.5) mcolor("59 126 161") msize(vsmall) msymbo
 , ///
 title("Comparing survey measures of homeownership (all adults)", color("0 50 98") size(large) pos(11) justification(left) lwidth(thin)) ///
 subtitle("Ratio of CPS person measures to SCF household measure of homeownership rates (18 or older)", color("59 126 161") size(small) pos(11) justification(left)) ///
-xtitle("", size(small) color(gs6) bmargin(zero)) xscale(lstyle(none)) ///
+xtitle("Year", margin(b-1) size(small) color(gs6) bmargin(zero)) xscale(lstyle(none)) ///
 xlabel(1989 "1989" 1992 "1992" 1995 "1995" 1998 "1998" 2001 "2001" 2004 "2004" 2007 "2007" 2010 "2010" 2013 "2013" 2016 "2016" 2019 "2019" 2022 "2022", angle(0) labsize(vsmall) glcolor(gs9%0) labcolor(gs6) tlength(0) tlcolor(gs6%30)) ///
 ytitle("") ///
 yscale(lstyle(none) range(.83 .87)) ///
@@ -596,9 +596,9 @@ twoway (connected ratio3 year, mcolor("238 31 96") msize(small) msymbol(triangle
 by(agegroup, rows(1) imargin(vsmall)) ///
 by(, title("Comparing survey measures of homeownership (alt. age groups)", color("0 50 98") size(large) pos(11) justification(left) lwidth(thin))) ///
 by(, subtitle("Ratio of CPS person measures to SCF household measure of homeownership rates, by age group", color("59 126 161") size(small) pos(11) justification(left))) ///
-subtitle(,  color(white) size(vsmall) lcolor("59 126 161") fcolor("59 126 161")) ///
+subtitle(, color(white) size(vsmall) lcolor("59 126 161") fcolor("59 126 161")) ///
 yline(1, lpattern(solid) lcolor("221 213 199")) ///
-xtitle("", size(small) color(gs6) bmargin(zero)) xscale(lstyle(none)) ///
+xtitle("Year", margin(t-2 b-1) size(small) color(gs6) bmargin(zero)) xscale(lstyle(none)) ///
 xlabel(1989 "1989" 1992 "1992" 1995 "1995" 1998 "1998" 2001 "2001" 2004 "2004" 2007 "2007" 2010 "2010" 2013 "2013" 2016 "2016" 2019 "2019" 2022 "2022", angle(45) labsize(tiny) glcolor(gs9%0) labcolor(gs6) tlength(1.25) tlcolor(gs6%30)) ///
 ytitle("") ///
 yscale(lstyle(none)) ///

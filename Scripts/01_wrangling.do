@@ -1,7 +1,7 @@
 ////////////////////////////////////////////////////////////////////////////////
 // Do File: 01_wrangling.do.do
 // Primary Author: James Hawkins, Berkeley Institute for Young Americans
-// Date: 5/15/24
+// Date: 5/28/24
 // Stata Version: 17
 // Description: In this script, I import and wrangle ASEC samples from
 // IPUMS-CPS (via the IPUMS API) and summary data of the triennial SCF files 

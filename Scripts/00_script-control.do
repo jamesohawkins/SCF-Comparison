@@ -5,7 +5,7 @@
 // Stata Version: 17
 // Description: From this script, you can reproduce all of the output for the 
 // accompanying brief "Are Wealth Data Representative of Young Adults?" 
-// Total script runtime is 131 seconds on an 11th Gen Intel i7 @ 3.00GHz.
+// Total script runtime is 171 seconds on an 11th Gen Intel i7 @ 3.00GHz.
 // 
 // The script is separated into the following sections:
 // 		1. Miscellaneous Set Up
